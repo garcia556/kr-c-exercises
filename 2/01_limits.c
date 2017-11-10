@@ -2,6 +2,8 @@
 #include <limits.h>
 #include <math.h>
 
+#define I   int
+
 #define UC  unsigned char
 #define UI  unsigned int
 #define USI unsigned short int
@@ -16,6 +18,7 @@
 
 int main()
 {
+	for (int i = 1; i <= BIT_MAX; i++) {   I x = pow(2, i); if (x <= 0) { x -= 1; printf("BITS: %02d:          int       min/max: %d / %d\n"	, i, -(x+1), x);	break; } }
 	for (int i = 1; i <= BIT_MAX; i++) {  UC x = pow(2, i); if (x <= 0) { x -= 1; printf("BITS: %02d: unsigned char      min/max: 0 / %u\n"		, i, x);			break; } }
 	for (int i = 1; i <= BIT_MAX; i++) {  SC x = pow(2, i); if (x <= 0) { x -= 1; printf("BITS: %02d:   signed char      min/max: %d / %d\n"	, i, -(x+1), x);	break; } }
 	for (int i = 1; i <= BIT_MAX; i++) {  UI x = pow(2, i); if (x <= 0) { x -= 1; printf("BITS: %02d: unsigned int       min/max: 0 / %u\n"		, i, x);			break; } }
