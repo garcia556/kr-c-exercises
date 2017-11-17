@@ -1,3 +1,5 @@
+#!/bin/bash
+
 src=$1
 out=$(basename ${src} .c)
 dir=$(dirname ${src})
