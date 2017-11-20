@@ -11,6 +11,14 @@ fi
 
 cc -g -O0 -std=c99 -o ${out} ${lib} ${src} 
 echo "Running program:"
-./${out}
+
+set -f
+shift
+args=""
+for var in "$@"; do
+	args="${args} ${var}"
+done
+
+./${out} ${args}
 rm -rf ${out} ${out}.dSYM
 

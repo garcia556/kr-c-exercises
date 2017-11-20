@@ -4,7 +4,7 @@ Some of them are missing as I couldn't fully get the requirements.
 
 ## Prerequisites
 
-- `cc` compiler (on macOS with Xcode Developer tools instaslled it's `clang`)
+- `cc` compiler with C99 support (on macOS with Xcode Developer tools installed `cc` is an alias to `clang`)
 
 ## Usage example
 
